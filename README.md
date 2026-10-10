@@ -32,6 +32,9 @@ cd macos
 ./scripts/dmg.sh                                           # dist/VocafyVisualizer-<version>.dmg
 ```
 
+The icon is built from `Resources/icon/source.png` with `python3 scripts/build-icon.py` (needs Pillow);
+the result, `Resources/AppIcon.icns`, is committed.
+
 Only the Command Line Tools are needed. Formatting is checked with
 `swift format lint --strict -r Sources`.
 
