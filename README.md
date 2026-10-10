@@ -14,6 +14,12 @@ turns it into 32 bars. Nothing is recorded or sent anywhere.
 
 Requires macOS 14.2 or later on Apple silicon.
 
+```
+brew install --cask piro0919/tap/vocafy-visualizer
+```
+
+Or take the .dmg from [the latest release](https://github.com/piro0919/vocafy-visualizer/releases/latest).
+
 On first launch macOS asks for permission to record audio. That is the permission Core Audio
 needs to tap Chrome's output. The app is signed only by itself, not notarized by Apple, so the
 first launch is refused; open it once from the right-click menu in Finder, or clear the
