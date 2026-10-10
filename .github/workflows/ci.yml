@@ -1,0 +1,22 @@
+name: CI
+
+on:
+  push:
+    branches: [main]
+  pull_request:
+
+jobs:
+  # Builds the .app the way a release does and runs its --selftest. The self test opens no
+  # window and touches no audio device, so it runs on the runner. build.sh signs ad hoc, so
+  # no certificate is needed here.
+  macos:
+    runs-on: macos-latest
+    defaults:
+      run:
+        working-directory: macos
+    steps:
+      - uses: actions/checkout@v4
+      # The rules are in macos/.swift-format: the defaults, with a 4-space indent and 120 columns.
+      - run: swift format lint --strict -r Sources
+      - run: ./scripts/build.sh
+      - run: ./dist/VocafyVisualizer.app/Contents/MacOS/VocafyVisualizer --selftest
