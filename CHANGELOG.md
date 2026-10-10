@@ -3,7 +3,7 @@
 Notable changes to Vocafy Visualizer. Before a release, rename `Unreleased` to
 `[x.y.z] - YYYY-MM-DD` and commit.
 
-## Unreleased
+## [0.1.0] - 2026-10-10
 
 ### Added
 
