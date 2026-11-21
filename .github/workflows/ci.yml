@@ -15,7 +15,7 @@ jobs:
       run:
         working-directory: macos
     steps:
-      - uses: actions/checkout@v4
+      - uses: actions/checkout@v7
       # The rules are in macos/.swift-format: the defaults, with a 4-space indent and 120 columns.
       - run: swift format lint --strict -r Sources
       - run: ./scripts/build.sh
